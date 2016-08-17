@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<security:authentication-manager>
+		
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="dataSource"
+				authorities-by-username-query='SELECT username,authority FROM jokessite.users where binary username= ?'
+				users-by-username-query='SELECT username,password,true FROM jokessite.users where binary username=?'
+				id="jdbcUserService" />
+		</security:authentication-provider>
+
+	</security:authentication-manager>
+	
+	<security:http use-expressions="true">
+		<security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/authenticated" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addNewJoke" access="isAuthenticated()" />
+		<security:intercept-url pattern="/seeMyJokes" access="isAuthenticated()" />
+		<security:intercept-url pattern="/seeMyRanking" access="isAuthenticated()" />
+		<security:intercept-url pattern="/changePassword" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doChangePassword" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deleteAccount" access="isAuthenticated()" />
+		<security:intercept-url pattern="/upVote" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/downVote" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/editProfile" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/jokeCreated" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/createJoke" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/confirmDelete" access="isAuthenticated()"/>
+		<security:intercept-url pattern="/infoPage" access="permitAll"/>
+		<security:intercept-url pattern="/login" access="permitAll"/>
+		<security:intercept-url pattern="/logOut" access="permitAll"/>
+		<security:intercept-url pattern="/accessDenied" access="permitAll"/>
+		<security:intercept-url pattern="/createAccount" access="permitAll"/>
+		<security:intercept-url pattern="/accountCreated" access="permitAll"/>
+		<security:intercept-url pattern="/doCreateAccount" access="permitAll"/>
+		<security:intercept-url pattern="/allCategories" access="permitAll"/>
+		<security:intercept-url pattern="/searchJokesByRating" access="permitAll"/>
+		<security:intercept-url pattern="/searchJokesByUser" access="permitAll"/>
+		<security:intercept-url pattern="/searchJokesByDate" access="permitAll"/>
+		<security:intercept-url pattern="/searchJokesByCategory" access="permitAll"/>
+		<security:intercept-url pattern="/funniestUsers" access="permitAll"/>
+		<security:intercept-url pattern="/" access="permitAll"/>
+		<security:intercept-url pattern="/static/**" access="permitAll"/>
+		<security:intercept-url pattern="/**" access="denyAll" />
+		<security:form-login login-page="/login"
+			authentication-failure-url="/login?error=true" />
+		<security:logout logout-success-url="/logOut" />
+		<security:access-denied-handler error-page="/accessDenied" />
+		<security:remember-me key="offersAppKey"
+			user-service-ref="jdbcUserService" />
+	</security:http>
+
+
+
+	<security:global-method-security pre-post-annotations="enabled"
+		secured-annotations="enabled">
+	</security:global-method-security>
+	
+	
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.password.StandardPasswordEncoder">
+	</bean>
+</beans>

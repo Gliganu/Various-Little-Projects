@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NoteSquirrel</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="edit_text">Edit text</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="passwordimage">PasswordImage</string>
+    <string name="touch_points">Touch four points on the image to set the passpoint sequence. You must click the same points in future to gain access to your notes</string>
+    <string name="storing_data">Storing data....</string>
+    <string name="save">Save</string>
+    <string name="lock">Lock</string>
+    <string name="reset_passpoints">Reset Passpoints</string>
+    <string name="create_passpoint_sequence">Create your Passpoint Sequence</string>
+    <string name="passpoints_saved">Passpoints Saved. Reintroduce the passpoints again to login</string>
+    <string name="configuration">Configuration</string>
+    <string name="replace_lock_photo">Replace Lock Image</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="browse_gallery">Browse Gallery</string>
+
+</resources>

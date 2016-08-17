@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="offers.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="includes" value=""></put-attribute>
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="toolbar" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="home" extends="offers.base">
+		<put-attribute name="title" value="Offers Home Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+
+	<definition name="allOffers" extends="offers.base">
+		<put-attribute name="title" value="Current Offers Online"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/allOffers.jsp"></put-attribute>
+	</definition>
+
+	<definition name="loginForm" extends="offers.base">
+		<put-attribute name="title" value="Login Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/loginForm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newAccountForm" extends="offers.base">
+		<put-attribute name="includes" value="/WEB-INF/tiles/newAccountScript.jsp"></put-attribute>
+		<put-attribute name="title" value="Create Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/newAccountForm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accessDenied" extends="offers.base">
+		<put-attribute name="title" value="Access Denied"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accessDenied.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accountCreated" extends="offers.base">
+		<put-attribute name="title" value="Account Created"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accountCreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin" extends="offers.base">
+		<put-attribute name="title" value="Admin Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/admin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error" extends="offers.base">
+		<put-attribute name="title" value="Error Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error.jsp"></put-attribute>
+	</definition>
+
+	<definition name="logOut" extends="offers.base">
+		<put-attribute name="title" value="Log Out Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/logOut.jsp"></put-attribute>
+	</definition>
+
+	<definition name="offerCreated" extends="offers.base">
+		<put-attribute name="title" value="Offer Created Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/offerCreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addOfferForm" extends="offers.base">
+		<put-attribute name="title" value="Create Offer Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addOfferForm.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="offerDeleted" extends="offers.base">
+		<put-attribute name="title" value="Offer Deleted Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/offerDeleted.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="showContactForm" extends="offers.base">
+		<put-attribute name="title" value="Send Message Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/contactForm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="messageSent" extends="offers.base">
+		<put-attribute name="title" value="Message Sent"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/messageSent.jsp"></put-attribute>
+	</definition>
+
+	<definition name="allMessages" extends="offers.base">
+		<put-attribute name="title" value="Your Messages"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/allMessages.jsp"></put-attribute>
+	</definition>
+
+
+
+</tiles-definitions>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="jokes.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="includes" value=""></put-attribute>
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="toolbar" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="home" extends="jokes.base">
+		<put-attribute name="title" value="Jokes Home Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="admin" extends="jokes.base">
+		<put-attribute name="title" value="Admin Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/admin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="authenticated" extends="jokes.base">
+		<put-attribute name="title" value="Authenticated Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/authenticated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="loginForm" extends="jokes.base">
+		<put-attribute name="title" value="Login Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/loginForm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="logOut" extends="jokes.base">
+		<put-attribute name="title" value="Log Out Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/logOut.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accessDenied" extends="jokes.base">
+		<put-attribute name="title" value="Access Denied"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accessDenied.jsp"></put-attribute>
+	</definition>
+
+	<definition name="createAccountForm" extends="jokes.base">
+		<put-attribute name="title" value="Create New Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/createAccountForm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="createAccountForm" extends="jokes.base">
+		<put-attribute name="includes" value="/WEB-INF/tiles/createAccountScript.jsp"></put-attribute>
+		<put-attribute name="title" value="Create New Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/createAccountForm.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountCreated" extends="jokes.base">
+		<put-attribute name="title" value="Create New Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accountCreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="funniestUsers" extends="jokes.base">
+		<put-attribute name="title" value="Funniest Uses Page"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/funniestUsers.jsp"></put-attribute>
+	</definition>
+
+	<definition name="allCategories" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/allCategories.jsp"></put-attribute>
+	</definition>
+
+	<definition name="editProfile" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editProfile.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addNewJoke" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addNewJoke.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="jokeCreated" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/jokeCreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="seeMyJokes" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/seeMyJokes.jsp"></put-attribute>
+	</definition>
+
+	<definition name="changePassword" extends="jokes.base">
+		<put-attribute name="includes" value="/WEB-INF/tiles/createAccountScript.jsp"></put-attribute>
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/changePassword.jsp"></put-attribute>
+	</definition>
+
+	<definition name="infoPage" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/infoPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="confirmDelete" extends="jokes.base">
+		<put-attribute name="title" value="All Categories"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/confirmDelete.jsp"></put-attribute>
+	</definition>
+
+
+
+</tiles-definitions>

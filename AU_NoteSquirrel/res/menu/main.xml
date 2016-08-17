@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gliga.au_notequirrel.MainActivity" >
+
+    <item
+        android:id="@+id/menu_passpoints_reset"
+        android:title="@string/reset_passpoints"/>
+    
+    <item
+        android:id="@+id/menu_replace_image"
+        android:title="@string/replace_lock_photo"/>
+
+</menu>
